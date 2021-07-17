@@ -23,5 +23,63 @@
         System.out.println("Sum of the first 5 terms in the sequence: " + sum);
     }
 
-}
 
+
+    }
+    class MySequence
+    {
+        double firstTerm; //store the first term
+
+        //Constructor
+        public MySequence(double a) {
+            firstTerm = a;
+        }
+
+        //Method that returns the nth term
+        public double nthTerm(int n) {
+            return n * n; //n^2
+        }
+
+        //following method generate a sequence of n terms
+        public String generateSeq(int n) {
+            if (n < 1) {
+                return "Invalid argument";
+            }
+
+            String rslt = "";
+            for (int i = 1; i <= n; i++) {
+                rslt = rslt + nthTerm(i) + "  ";
+            }
+            return rslt;
+        }
+
+        public static void main(String[] args) {
+            MySequence m1 = new MySequence(1);
+            System.out.println("First 10 terms " + m1.generateSeq(10));
+        }
+
+    }
+class Series extends Sequence {
+    public double sum(int n) {
+        double sum = 0;
+        double a = 4;
+        Sequence s1 = new Sequence(4);
+
+        System.out.print("" + s1.t(1));
+
+        boolean printed = false;
+        for (int i = 2; i <= n; i++) {
+            if (i <= 4 || i == n)
+                System.out.print(" + " + s1.t(i));
+
+            sum += s1.t(i) ;
+        }
+        System.out.println(" = " + sum );
+        return sum ;
+    }
+
+    public static void main(String[] args) {
+        Series s1 = new Series();
+        s1.sum(5);
+    }
+}

@@ -1,4 +1,4 @@
-public class MySequence {
+/*public class MySequence {
     double firstTerm; //store the first term
 
     //Constructor
@@ -30,3 +30,4 @@ public class MySequence {
     }
 
 }
+*/
