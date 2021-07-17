@@ -64,17 +64,13 @@ class Series extends Sequence {
         double sum = 0;
         double a = 4;
         Sequence s1 = new Sequence(4);
-
-        System.out.print("" + s1.t(1));
-
-        boolean printed = false;
-        for (int i = 2; i <= n; i++) {
+        for (int i = 1; i <= n; i++) {
             if (i <= 4 || i == n)
                 System.out.print(" + " + s1.t(i));
 
             sum += s1.t(i) ;
         }
-        System.out.println(" = " + sum );
+        System.out.println(" = " + sum );  //Print sum
         return sum ;
     }
 
